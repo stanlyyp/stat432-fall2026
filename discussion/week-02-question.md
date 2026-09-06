@@ -9,9 +9,9 @@ author: "Runting Chen (675646432)"
 AIC and BIC both compare fitted models by combining a goodness-of-fit term with a penalty for the number of fitted parameters. For a Gaussian linear model with $k$ fitted coefficients, their common forms are
 
 $$
-\operatorname{AIC}=-2\log L(\widehat\theta)+2k,
+\mathrm{AIC}=-2\log L(\widehat\theta)+2k,
 \qquad
-\operatorname{BIC}=-2\log L(\widehat\theta)+k\log n.
+\mathrm{BIC}=-2\log L(\widehat\theta)+k\log n.
 $$
 
 The difference is the complexity penalty. AIC adds $2$ for every additional parameter, whereas BIC adds $\log n$. When $n>e^2\approx 7.4$, BIC penalizes an extra predictor more heavily than AIC. Therefore, a predictor can improve the likelihood enough to overcome AIC's penalty but not BIC's penalty. In the Week 2 diabetes comparison, adding `s6` improved the fit term by about $3.108$: this exceeds AIC's penalty of $2$, but not BIC's penalty of $\log(370)\approx5.914$. Thus AIC selects Model B and BIC selects Model A.
