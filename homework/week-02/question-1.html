@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Author" content="润庭 陈">
+  <meta name="LastAuthor" content="润庭 陈">
+  <meta name="CreationTime" content="2026-09-05T19:59:00Z">
+  <meta name="ModificationTime" content="2026-09-05T19:59:00Z">
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 5.0px 0.0px; font: 16.0px Arial}
+    p.p2 {margin: 0.0px 0.0px 5.0px 0.0px; font: 12.0px Arial}
+    p.p3 {margin: 0.0px 0.0px 5.0px 0.0px; font: 12.0px Arial; min-height: 14.0px}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; min-height: 14.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Arial}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Arial; min-height: 18.0px}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #101820}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #101820; min-height: 16.0px}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times}
+    p.p13 {margin: 0.0px 0.0px 0.0px 72.0px; font: 12.0px Arial}
+    li.li2 {margin: 0.0px 0.0px 5.0px 0.0px; font: 12.0px Arial}
+    span.s1 {font: 16.0px Times}
+    span.s2 {font: 12.0px Arial; color: #000000}
+    span.s3 {font: 12.0px Times}
+    span.s4 {font: 12.0px Symbol}
+    span.s5 {font: 12.0px Arial}
+    table.t1 {border-collapse: collapse}
+    td.td1 {border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<p class="p1"><b>Question 1. Fixed-design Global MSE</b></p>
+<p class="p1"><b>a.</b></p>
+<p class="p2">Across all 200 simulation runs, training MSE is <b>monotonically non-increasing</b> as predictors are added.</p>
+<p class="p3"><br></p>
+<p class="p2">To illustrate this behavior, the table below tracks individual step changes () for <b>Run 1</b> and <b>Run 200</b>:</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p4"><b>m</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4"><b>Run 1 Train MSE</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4"><b>Run 1 Delta (Δ)</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4"><b>Run 200 Train MSE</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4"><b>Run 200 Delta (Δ)</b></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p4"><b>0</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">1.1759</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">—</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">1.1607</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">—</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p4"><b>1</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">1.0424</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">-0.1335</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">0.9377</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">-0.2230</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p4"><b>2</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">1.0405</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">-0.0019</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">0.9340</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">-0.0037</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p4"><b>3</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">1.0362</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">-0.0043</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">0.9340</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">-0.0000</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p4"><b>4</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">1.0306</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">-0.0057</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">0.9249</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">-0.0090</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p4"><b>5</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">1.0019</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">-0.0287</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">0.9246</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">-0.0004</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p5"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p5"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p5"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p5"><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p5"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p4"><b>19</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">0.8127</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">-0.0200</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">0.8253</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">-0.0203</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p4"><b>20</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">0.8049</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">-0.0079</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">0.8225</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p4">-0.0028</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2">For every single predictor added (),<span class="Apple-converted-space">  </span>holds strictly without exception across all 200 runs.</p>
+<p class="p2">Adding a predictor<span class="Apple-converted-space">  </span>expands the parameter space. Because the optimization search space grows larger, OLS can always achieve <b>at least as good a fit</b> as the smaller model.</p>
+<p class="p6"><b>Question 1.</b><span class="s1"><b>b</b></span></p>
+<p class="p7">Formulation understanding:</p>
+<p class="p8"><br></p>
+<p class="p2">Expanding the squared Euclidean norm:</p>
+<ul class="ul1">
+  <li class="li2"><b>Bias Part:</b> . Since<span class="Apple-converted-space">  </span>and<span class="Apple-converted-space">  </span>are fixed, this term is deterministic!<span class="Apple-converted-space"> </span></li>
+  <li class="li2"><b>Cross Term:</b><span class="Apple-converted-space">  </span>(because ).</li>
+  <li class="li2"><b>Noise Part:</b> .<span class="Apple-converted-space"> </span></li>
+</ul>
+<p class="p4"><b>Theoretical Curve:</b> Evaluated via exact expected values where noise is integrated out mathematically into deterministic algebraic terms (), yielding a <b>perfectly smooth curve</b>.</p>
+<p class="p4"><b>Simulation Averages :</b> Evaluated over<span class="Apple-converted-space">  </span>empirical draws of<span class="Apple-converted-space">  </span>and . Because<span class="Apple-converted-space">  </span>is finite, <b>residual sampling variation remains</b>, producing a slightly <b>irregular/wiggly curve</b>.</p>
+<p class="p6"><b>Question 1. c</b></p>
+<p class="p7">The single-run test MSE is less smooth because the error terms<span class="Apple-converted-space">  </span>and are randomly generated and therefore vary from one simulation run to another.<span class="Apple-converted-space"> </span></p>
+<p class="p7">In , added predictor increases, the approximation bias decreases, while the estimation variance increases. Therefore, the test MSE may first decrease and then increase, reflecting the bias–variance tradeoff.</p>
+<p class="p7">But Training MSE generally decreases as more predictors are added and does not account for the increasing estimation variance. It cannot determine the optimal number of predictors.</p>
+<p class="p8"><br></p>
+<p class="p1"><b>Question 2. Target Point Prediction</b></p>
+<p class="p1"><b>a</b></p>
+<p class="p9"><b></b><br></p>
+<p class="p9"><b></b><br></p>
+<p class="p7">m <span class="Apple-converted-space">  </span>| Squared Bias <span class="Apple-converted-space">  </span>| Variance <span class="Apple-converted-space">  </span>| Expected Sq Error<span class="Apple-converted-space"> </span></p>
+<p class="p7">----------------------------------------------------</p>
+<p class="p7">0 <span class="Apple-converted-space">  </span>| 1.0000<span class="Apple-converted-space">                  </span>| 0.0100 <span class="Apple-converted-space">    </span>| 1.0100 <span class="Apple-converted-space">           </span></p>
+<p class="p7">1 <span class="Apple-converted-space">  </span>| 1.0000<span class="Apple-converted-space">                  </span>| 0.0100 <span class="Apple-converted-space">    </span>| 1.0100 <span class="Apple-converted-space">           </span></p>
+<p class="p7">2 <span class="Apple-converted-space">  </span>| 0.2500<span class="Apple-converted-space">                  </span>| 0.0200 <span class="Apple-converted-space">    </span>| 0.2700 <span class="Apple-converted-space">           </span></p>
+<p class="p7">3 <span class="Apple-converted-space">  </span>| 0.2500<span class="Apple-converted-space">                  </span>| 0.0200 <span class="Apple-converted-space">    </span>| 0.2700 <span class="Apple-converted-space">           </span></p>
+<p class="p7">4 <span class="Apple-converted-space">  </span>| 0.2500<span class="Apple-converted-space">                  </span>| 0.0200 <span class="Apple-converted-space">    </span>| 0.2700 <span class="Apple-converted-space">           </span></p>
+<p class="p7">5 <span class="Apple-converted-space">  </span>| 0.0000<span class="Apple-converted-space">                  </span>| 0.0300 <span class="Apple-converted-space">    </span>| 0.0300 <span class="Apple-converted-space">           </span></p>
+<p class="p7">6 <span class="Apple-converted-space">  </span>| 0.0000<span class="Apple-converted-space">                  </span>| 0.0300 <span class="Apple-converted-space">    </span>| 0.0300</p>
+<p class="p7">Squared Bias Term :</p>
+<p class="p10"><span class="s2">Because the predictors are </span>orthogonal with each other, so each one contains unique contribution to the y. so the bias term contain the omitted predictors.</p>
+<p class="p4"><span class="s3">Variance Term :</span><span class="s4"><span class="Apple-converted-space"> </span></span><b> </b>Arises from estimating the intercept.</p>
+<p class="p10"><span class="s2">: Arises from each included predictor. They are </span>orthogonal with each other, so their influence can sum up.</p>
+<p class="p11"><br></p>
+<p class="p11"><br></p>
+<p class="p11"><br></p>
+<p class="p1"><b>Question 2.b</b></p>
+<p class="p7">Smallest m minimizing theoretical error: m = 5</p>
+<p class="p7">Minimum Theoretical Error = 0.0300</p>
+<p class="p8"><br></p>
+<p class="p7">m <span class="Apple-converted-space">  </span>| Theoretical Error | Simulated Average (B=200)</p>
+<p class="p7">----------------------------------------------------</p>
+<p class="p7">0 <span class="Apple-converted-space">  </span>| 1.0100 <span class="Apple-converted-space">            </span>| 1.0255<span class="Apple-converted-space">                   </span></p>
+<p class="p7">1 <span class="Apple-converted-space">  </span>| 1.0100 <span class="Apple-converted-space">            </span>| 1.0255<span class="Apple-converted-space">                   </span></p>
+<p class="p7">2 <span class="Apple-converted-space">  </span>| 0.2700 <span class="Apple-converted-space">            </span>| 0.2739<span class="Apple-converted-space">                   </span></p>
+<p class="p7">3 <span class="Apple-converted-space">  </span>| 0.2700 <span class="Apple-converted-space">            </span>| 0.2739<span class="Apple-converted-space">                   </span></p>
+<p class="p7">4 <span class="Apple-converted-space">  </span>| 0.2700 <span class="Apple-converted-space">            </span>| 0.2739<span class="Apple-converted-space">                   </span></p>
+<p class="p7">5 <span class="Apple-converted-space">  </span>| 0.0300 <span class="Apple-converted-space">            </span>| 0.0344<span class="Apple-converted-space">                   </span></p>
+<p class="p7">6 <span class="Apple-converted-space">  </span>| 0.0300 <span class="Apple-converted-space">            </span>| 0.0344</p>
+<p class="p8"><br></p>
+<p class="p1"><b>Question 2.c</b></p>
+<p class="p12">= 0</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p4">Bias: Only omitting<span class="Apple-converted-space">  </span>or<span class="Apple-converted-space">  </span>introduces a bias penalty of<span class="Apple-converted-space">  </span>or .</p>
+<p class="p4">Variance: Only fitting<span class="Apple-converted-space">  </span>and<span class="Apple-converted-space">  </span>passes estimation variance into the final prediction, scaled by .</p>
+<p class="p7">Question2: Evaluates error at a single point . The specific coordinates act as local filters: predictors where<span class="Apple-converted-space">  </span>contribute <span class="s5">zero bias</span> when omitted and <span class="s5">zero variance</span> when included.</p>
+<p class="p7">Question1: Evaluates error averaged across all<span class="Apple-converted-space">  </span>rows of . Because the columns of<span class="Apple-converted-space">  </span>are orthonormalized, every predictor contributes equally on average across the domain</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p1"><b>Question 3.</b><span class="s3"> </span><b>Optimism &amp; Cp Criterion</b></p>
+<p class="p6"><b>a.<span class="Apple-converted-space"> </span></b></p>
+<p class="p9"><b></b><br></p>
+<p class="p9"><b></b><br></p>
+<p class="p13"><span class="s3"><span class="Apple-converted-space">    </span></span> (since )</p>
+<p class="p5"><br></p>
+<p class="p5"><br></p>
+<p class="p5"><br></p>
+<p class="p5"><br></p>
+<p class="p5"><br></p>
+<p class="p5"><br></p>
+<p class="p5"><br></p>
+<p class="p6"><b>b.<span class="Apple-converted-space"> </span></b></p>
+<p class="p7">E(MSE_train | X) = 0.998333</p>
+<p class="p7">E(MSE_test<span class="Apple-converted-space">  </span>| X) = 1.081667</p>
+<p class="p7">Expected Optimism = 0.083333</p>
+<p class="p7">The inequality<span class="Apple-converted-space">  </span>holds <span class="s5"><b>on average</b></span> across repeated sampling. For a single realized sample pair , random fluctuations in<span class="Apple-converted-space">  </span>and<span class="Apple-converted-space">  </span>can result in .</p>
+<p class="p6"><b>c.<span class="Apple-converted-space"> </span></b></p>
+<p class="p7">Estimated Test MSE (MSE_hat_test) = 1.050000</p>
+<p class="p7">Mallows' Cp<span class="Apple-converted-space">                        </span>= 11.250000</p>
+<p class="p7">Cp derived from MSE_hat_test <span class="Apple-converted-space">      </span>= 11.250000</p>
+<p class="p4">Because<span class="Apple-converted-space">  </span>is a positive linear transformation of :</p>
+<p class="p5"><br></p>
+<p class="p4">Thus, selecting a model with the minimum<span class="Apple-converted-space">  </span>is identical to selecting the model with the minimum estimated test MSE.</p>
+<p class="p4">Mallows’<span class="Apple-converted-space">  </span>is a model selection metric that balances bias (underfitting) and variance (overfitting) to estimate a linear model’s generalization error on unseen test data.</p>
+<p class="p5"><br></p>
+<p class="p1"><b>Question 4.</b><span class="s3"> </span><b>Comparing Mallows, AIC, and BIC</b></p>
+<p class="p7"><b>AIC (Akaike Information Criterion)</b> and <b>BIC (Bayesian Information Criterion)</b> are model selection metrics used in statistics and machine learning to compare different statistical models fit on the same dataset.</p>
+<p class="p7">Both metrics evaluate how well a model fits the data while penalizing it for complexity, helping you select a model that balances <b>goodness-of-fit</b> and <b>parsimony</b> (simplicity) to prevent overfitting.</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p6"><b>a.<span class="Apple-converted-space"> </span></b></p>
+<p class="p7">All fitted models</p>
+<p class="p7"><span class="Apple-converted-space">         </span>model <span class="Apple-converted-space">        </span>p<span class="Apple-converted-space">          </span>RSS</p>
+<p class="p7"><span class="Apple-converted-space">       </span>Model A <span class="Apple-converted-space">      </span>7 <span class="Apple-converted-space">    </span>1.098909e+06</p>
+<p class="p7"><span class="Apple-converted-space">       </span>Model B <span class="Apple-converted-space">      </span>8 <span class="Apple-converted-space">    </span>1.089717e+06</p>
+<p class="p7">Full reference <span class="Apple-converted-space">    </span>10<span class="Apple-converted-space">    </span>1.089452e+06</p>
+<p class="p7">Full-model residual degrees of freedom: 359</p>
+<p class="p7">Common noise variance estimate: 3034.684460</p>
+<p class="p8"><br></p>
+<p class="p6"><b>b.<span class="Apple-converted-space"> </span></b></p>
+<p class="p7">Criteria for the two candidate models</p>
+<p class="p7"><span class="Apple-converted-space">  </span>model <span class="Apple-converted-space">    </span>p<span class="Apple-converted-space">          </span>RSS<span class="Apple-converted-space">              </span>Cp <span class="Apple-converted-space">      </span>reduced AIC<span class="Apple-converted-space">  </span>reduced BIC</p>
+<p class="p7">Model A <span class="Apple-converted-space">  </span>7<span class="Apple-converted-space">  </span>1.098909e+06 8.116253<span class="Apple-converted-space">  </span>2974.640260<span class="Apple-converted-space">  </span>3005.948284</p>
+<p class="p7">Model B <span class="Apple-converted-space">  </span>8<span class="Apple-converted-space">  </span>1.089717e+06 7.087434<span class="Apple-converted-space">  </span>2973.532485<span class="Apple-converted-space">  </span>3008.754012</p>
+<p class="p8"><br></p>
+<p class="p7">Cp selects: Model B</p>
+<p class="p7">AIC selects: Model B</p>
+<p class="p7">BIC selects: Model A</p>
+<p class="p8"><br></p>
+<p class="p6"><b>c.<span class="Apple-converted-space"> </span></b></p>
+<p class="p7">Adding s6: fit gain versus one-parameter penalty</p>
+<p class="p7">AIC/BIC fit gain: 3.107775;<span class="Apple-converted-space"> </span></p>
+<p class="p7">AIC penalty: 2; BIC penalty: 5.913503</p>
+<p class="p7">Cp fit gain: 3.028819;<span class="Apple-converted-space"> </span></p>
+<p class="p7">Cp penalty: 2</p>
+<p class="p7">AIC / Cp: Imposes a fixed, relatively light penalty on model complexity.</p>
+<p class="p7">BIC: Applies a heavier penalty on redundant variables as sample size grows, strongly mitigating overfitting.</p>
+<p class="p8"><br></p>
+<p class="p6"><b>Question 5: Validation and final test data</b></p>
+<p class="p7">1. Misuse Identification and Selection Bias</p>
+<p class="p7">First misused step: Step 2 is the first misuse. Although regression coefficients were estimated using only the training data, the final test data were used to select the predictor count .</p>
+<p class="p7">Why the minimum test MSE is overly optimistic: The test set contains random sampling variability. Selecting the candidate with the minimum test MSE favors a model that profited from "lucky" random fluctuations on that specific test sample, leading to an overly optimistic (underestimated) prediction error.</p>
+<p class="p7">2. Correct 5-Fold Cross-Validation Workflow</p>
+<p class="p7">Reserve Final Test Data: Fully lock away rows 371 through 442 without inspecting their features or responses.</p>
+<p class="p7">5-Fold Cross-Validation on Training Data: Divide rows 1 through 370 into 5 equal folds. For each predictor count , fit on 4 folds, validate on the remaining fold, and compute the average validation MSE across all 5 iterations.</p>
+<p class="p7">Select Predictor Count: Choose the<span class="Apple-converted-space">  </span>that achieves the lowest average cross-validation MSE.</p>
+<p class="p7">Refit Model: Refit the model with<span class="Apple-converted-space">  </span>predictors using all 370 training observations.</p>
+<p class="p7">Final Evaluation: Evaluate the refitted model once and only once on the locked test data (rows 371–442) to obtain an unbiased estimate of prediction error.</p>
+<p class="p7">(Note: Any data-dependent preprocessing must also be estimated within each training fold).</p>
+<p class="p7">3. Remediation After Examining Test Data</p>
+<p class="p7">Transparent Reporting: The analysis can only be reported as exploratory, explicitly acknowledging that the test set was used for hyperparameter selection. The reported minimum cannot serve as an untouched final evaluation.</p>
+<p class="p7">Required Additional Data: A new, independent test dataset or genuinely new future observations are required to conduct an unbiased final evaluation.</p>
+<p class="p8"><br></p>
+</body>
+</html>
