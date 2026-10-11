@@ -6,4 +6,4 @@ author: "Runting Chen (675646432)"
 
 **Question:**
 
-How do we choose a classification method, and when should we combine it with techniques such as PCA, Lasso, or Ridge?
+We have learned several classification methods, including KNN, logistic regression, LDA, and QDA. How should we choose the most appropriate method based on the dataset’s characteristics, such as sample size, number of predictors, and decision boundary? When should we combine these methods with PCA, Lasso, or Ridge? Is there a general workflow for selecting models and preprocessing techniques to achieve the best test performance?
